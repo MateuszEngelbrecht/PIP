@@ -1,0 +1,85 @@
+zad. 1
+public static int[] revert(int[] arr){
+int[] tab = new int[arr.lenght];
+for (int i=0; i<arr.length; i++)
+tab[arr.length - i - 1] = arr[i];
+
+return tab;
+}
+
+zad. 2
+public static String arrayToString(int[]arr){
+String res=new String();
+for(int a=0;a<arr.length;a++){
+if(a>0) res +=",";
+res += arr[a];
+}
+return res;
+}
+
+zad. 3
+public static int[] evens(int[] arr) {
+    int length = 0;
+    int j = 0;
+    for (int i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 == 0) {
+            length++;
+        }   
+    }   
+    int[] result = new int[length];
+    int aux = 0;
+    for (int i = 0; i < arr.length; i++){
+        if (arr[i] % 2 == 0) {
+            result[aux++] += arr[i];
+        }
+    }
+    return result;
+ }
+}
+
+zad. 4
+public static boolean areEqual(int arr1[], int arr2[])
+    {
+        int n = arr1.length;
+        int m = arr2.length;
+        if (n != m)
+            return false;
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        for (int i = 0; i < n; i++)
+            if (arr1[i] != arr2[i])
+                return false;
+ 
+        return true;
+    }
+
+zad. 5
+
+public static void wypisz(int[] arr){
+	for (int i=0; i<arr.length; i++){
+		sysout(arr[i]);
+	}
+}
+
+zad. 6
+
+public static boolean useLoop(String[] arr, String targetValue) {
+	for(String s: arr){
+		if(s.equals(targetValue))
+			return true;
+	}
+	return false;
+}
+
+zad. 8
+
+public static boolean isIncreasing(int[]arr)
+{
+    for(int i=1; i<arr.length;i++)
+    {
+        if(arr[i-1]>arr[i])
+            return false;
+    }
+    return true;
+ }
+
